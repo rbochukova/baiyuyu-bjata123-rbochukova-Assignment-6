@@ -1,6 +1,7 @@
 # XB_0082 - Assignment Week 12 (2022-2023)
 
 -----
+* **Group Number**: /replace by your group number on canvas/
 * **Contributor 1**: /replace by your full name/
 * **VUnet ID number 1**: /replace by your VUnet ID number/
 * **Contributor 2**: /replace by your full name/
@@ -79,6 +80,8 @@ For tasks 1 to 5, you are requested to make some modifications to the code. To l
 - Create the `Book` class, which contains the `title` (string), `author` (string), `rating` (float), `reviews` (integer), `price` (float), `years` (list of integers), and `genre` (string) attributes. Don't forget to create its constructor with the corresponding parameters in the given order.
 - Define the `__str__()` method in the `Book` class. The method should return the title of the book.
 - Create the `Amazon` class, which represents the list of bestsellers and only contains the attribute `bestsellers` (list of Books). Don't forget to create its constructor with the corresponding parameter.
+
+**Note** Use the tests to verify this task since the main program will not run.
 
 ### Task 2: Create FictionBook and NonFictionBook Classes (20%)
 
