@@ -1,4 +1,4 @@
-# XB_0082 - Assignment Week 12 (2022-2023)
+# XB_0082 - Assignment 6 (2022-2023)
 
 -----
 * **Group Number**: /replace by your group number on canvas/
