@@ -75,7 +75,7 @@ We want to ease the collaboration in a pair by creating issues on GitHub. To do 
 
 For tasks 1 to 5, you are requested to make some modifications to the code. To start `clone` the project to your computer. To let our partner know we did our job, you should `add`, `commit`, and `push` your changes frequently. To get your partner's changes, remember to `pull` them from the server. Both members of the pair should commit and push changes to the repository. Now, every time that you are done with an **issue** you must close it to track the progress of the project.
 
-For more information about git take a look at the following resources:
+Your TA will show you how to do all these different steps. For more information about git take a look at the following resources:
 - https://www.w3schools.com/git/default.asp?remote=github
 - https://www.jetbrains.com/help/pycharm/manage-projects-hosted-on-github.html
 
