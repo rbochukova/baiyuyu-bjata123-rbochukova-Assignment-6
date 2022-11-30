@@ -73,7 +73,11 @@ Each task must be developed within the `books_types.py` file.
 
 We want to ease the collaboration in a pair by creating issues on GitHub. To do so, go to your online Git repository and create at least one issue per task (for tasks 1, 2, 3, 4, and 5).
 
-For tasks 1 to 5, you are requested to make some modifications to the code. To let our partner know we did our job, you should `add`, `commit`, and `push` your changes frequently. To get your partner's changes, remember to `pull` them from the server. Both members of the pair should commit and push changes to the repository. Now, every time that you are done with an **issue** you must close it to track the progress of the project.
+For tasks 1 to 5, you are requested to make some modifications to the code. To start `clone` the project to your computer. To let our partner know we did our job, you should `add`, `commit`, and `push` your changes frequently. To get your partner's changes, remember to `pull` them from the server. Both members of the pair should commit and push changes to the repository. Now, every time that you are done with an **issue** you must close it to track the progress of the project.
+
+For more information about git take a look at the following resources:
+- https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/
+- https://www.jetbrains.com/help/pycharm/manage-projects-hosted-on-github.html
 
 ### Task 1: Create Amazon and Book Classes (15%)
 
