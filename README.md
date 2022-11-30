@@ -79,7 +79,7 @@ Your TA will show you how to do all these different steps. For more information 
 - https://www.w3schools.com/git/default.asp?remote=github
 - https://www.jetbrains.com/help/pycharm/manage-projects-hosted-on-github.html
 
-### Task 1: Create Amazon and Book Classes (15%)
+### Task 1: Create Amazon and Book Classes (10%)
 
 - Create the `Book` class, which contains the `title` (string), `author` (string), `rating` (float), `reviews` (integer), `price` (float), `years` (list of integers), and `genre` (string) attributes. Don't forget to create its constructor with the corresponding parameters in the given order.
 - Define the `__str__()` method in the `Book` class. The method should return the title of the book.
@@ -118,7 +118,7 @@ The method has no parameters and returns an integer that represents the year wit
 Create the `best_year_reviews()` method in the `Amazon` class.
 The method has no parameters and returns an integer that represents the year with the best median reviews. Consider using the `statistics` module to calculate the median value for each year.
 
-### Task 5: Recommend Books (25%)
+### Task 5: Recommend Books (20%)
 
 - Add the attribute `recommended` (Boolean) to the `Book` class and set it to `False`. Do not modify the list of parameters of the constructor.
 - Create the method `recommend()` in the `Book` class. The method receives a rating and a number of reviews, and it does not return anything. If the fiction book has a rating that is at least that of the first parameter and a number of reviews at least that of the second parameter, its `recommended` attribute must be set to `True`.
