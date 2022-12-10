@@ -1,10 +1,10 @@
 # XB_0082 - Assignment 6 (2022-2023)
 
 -----
-* **Group Number**: /replace by your group number on canvas/
-* **Contributor 1**: /replace by your full name/
-* **VUnet ID number 1**: /replace by your VUnet ID number/
-* **Contributor 2**: /replace by your full name/
+* **Group Number**: /60/
+* **Contributor 1**: /Beata Jahangiri/
+* **VUnet ID number 1**: /bji230/
+* **Contributor 2**: /Ralitza Bochukova/
 * **VUnet ID number 2**: /replace by your VUnet ID number/
   
 **Date**: /replace by date of first modification/
