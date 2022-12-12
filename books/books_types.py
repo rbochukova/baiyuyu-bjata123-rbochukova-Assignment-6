@@ -10,5 +10,18 @@ from typing import Dict, List
 import csv
 import statistics
 
-Class 
-HELLOOOOOO
+
+class Book:
+    """
+    """
+
+    def __init__(self, hour: int = 0, minute: int = 0, second: int = 0) -> None:
+        """
+        Initializes a Time object.
+        :param hour: integer value for hour
+        :param minute: integer value for minute
+        :param second: integer value for second
+        """
+        self.hour: int = hour
+        self.minute: int = minute
+        self.second: int = second
