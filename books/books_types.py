@@ -15,13 +15,31 @@ class Book:
     """
     """
 
-    def __init__(self, hour: int = 0, minute: int = 0, second: int = 0) -> None:
+    def __init__(self, title:str, author: str, rating: float = 0, reviews:int = 0, price:float = 0, years=list[int], genre:str) -> None:
         """
-        Initializes a Time object.
-        :param hour: integer value for hour
-        :param minute: integer value for minute
-        :param second: integer value for second
+        Initializes a Book object.
+        :param title: string value for title of book
+        :param author: string value for title of book
+        :param rating: string value for title of book
+        :param reviews: string value for title of book
+        :param price: string value for title of book
+        :param years: list of integers
+        :param genre: string value for genre
         """
-        self.hour: int = hour
-        self.minute: int = minute
-        self.second: int = second
+        self.title: str = title
+        self.author: str = author
+        self.rating: float = rating
+        self.reviews: int = reviews
+        self.price: float = price
+        self.years: List = years
+        self.genre: str = genre
+
+    def __str__(self) -> str:
+        """
+        Returns the string represetation of a Book object.
+        :returns: string representation of the Book object.
+        """
+        food_type = Dish.FOOD_TYPE_NAMES[self.food_type]
+        meal_type = Dish.MEAL_TYPES[self.meal]
+        return f"{self.name}, {self.calories}, {food_type}, {meal_type}"
+
