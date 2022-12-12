@@ -15,7 +15,7 @@ class Book:
     """
     """
 
-    def __init__(self, title:str, author: str, rating: float = 0, reviews:int = 0, price:float = 0, years=list[int], genre:str) -> None:
+    def __init__(self, title:str, author: str, genre:str, rating: float = 0, reviews:int = 0, price:float = 0, years=list(int)) -> None:
         """
         Initializes a Book object.
         :param title: string value for title of book
@@ -39,9 +39,7 @@ class Book:
         Returns the string represetation of a Book object.
         :returns: string representation of the Book object.
         """
-        # food_type = Dish.FOOD_TYPE_NAMES[self.food_type]
-        # meal_type = Dish.MEAL_TYPES[self.meal]
-        # return f"{self.name}, {self.calories}, {food_type}, {meal_type}"
+        return f"{self.title}"
 
 class Amazon:
     """
