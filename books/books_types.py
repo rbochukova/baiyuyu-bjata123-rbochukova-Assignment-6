@@ -10,5 +10,4 @@ from typing import Dict, List
 import csv
 import statistics
 
-# TODO: Add your code to tasks 1 to 5 in this file.
 
