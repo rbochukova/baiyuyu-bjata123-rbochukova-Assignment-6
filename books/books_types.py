@@ -39,7 +39,6 @@ class Book:
         Returns the string represetation of a Book object.
         :returns: string representation of the Book object.
         """
-        food_type = Dish.FOOD_TYPE_NAMES[self.food_type]
-        meal_type = Dish.MEAL_TYPES[self.meal]
-        return f"{self.name}, {self.calories}, {food_type}, {meal_type}"
-
+        # food_type = Dish.FOOD_TYPE_NAMES[self.food_type]
+        # meal_type = Dish.MEAL_TYPES[self.meal]
+        # return f"{self.name}, {self.calories}, {food_type}, {meal_type}"
