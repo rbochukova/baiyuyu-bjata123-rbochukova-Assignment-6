@@ -5,7 +5,7 @@
 * **Contributor 1**: /Beata Jahangiri/
 * **VUnet ID number 1**: /bji230/
 * **Contributor 2**: /Ralitza Bochukova/
-* **VUnet ID number 2**: /replace by your VUnet ID number/
+* **VUnet ID number 2**: /rba249/
   
 **Date**: /replace by date of first modification/
 
