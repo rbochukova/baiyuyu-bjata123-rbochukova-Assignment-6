@@ -52,7 +52,15 @@ class Amazon:
     """
 
     def __init__(self, bestsellers: list):
+        """
+        """
         self.bestsellers: list = bestsellers
+
+    def read_books_csv(path: str) -> None:
+        """
+        """
+        with open(path, encoding='utf-8-sig') as CSV_file:
+            reader = csv.DictReader(CSV_file, delimiter=";")
 
 
 class FictionBook(Book):
@@ -67,7 +75,8 @@ class FictionBook(Book):
     def __str__(self) -> str:
         """
         """
-        return f"{self.title}: {self.genre} {self.years}."
+        for i in self.years:
+            return f"{self.title}: {self.genre} ({i})"
 
 
 class NonFictionBook(Book):
@@ -84,4 +93,5 @@ class NonFictionBook(Book):
         Returns the string representation of a Book object.
         :returns: string representation of the Book object.
         """
-        return f"{self.title}: {self.genre} {self.years}."
+        for i in self.years:
+            return f"{self.title}: {self.genre} ({i})"
