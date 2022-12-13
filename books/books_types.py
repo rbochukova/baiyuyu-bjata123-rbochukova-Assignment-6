@@ -18,8 +18,7 @@ class Book:
     FICTION: str = 'Fiction'
     NON_FICTION: str = 'Non Fiction'
 
-    def __init__(self, title: str, author: str, rating: float = 0.0, reviews: int = 0, price: float = 0.0, years=list,
-                 genre=str) -> None:
+    def __init__(self, title, author, rating, reviews, price, years, genre) -> None:
         """
         Initializes a Book object.
         :param title: string value for title of book
@@ -55,40 +54,34 @@ class Amazon:
     def __init__(self, bestsellers: list):
         self.bestsellers: list = bestsellers
 
-#
-# class FictionBook(Book):
-#     """
-#     """
-#
-#     def __init__(self, title, author, rating, reviews, price, years, genre) -> None:
-#         """
-#         """
-#         self.genre = genre
-#         genre = Book.FICTION
-#         genre = Book.NON_FICTION
-#         Book.__init__(self, title, author, rating, reviews, price, years, genre)
-#
-#     def __str__(self) -> str:
-#         """
-#         """
-#         return f"{self.title}: {self.genre} {self.years}."
-#
-#
-# class NonFictionBook(Book):
-#     """
-#     """
-#
-#     def __init__(self, title, author, rating, reviews, price, years, genre) -> None:
-#         """
-#         """
-#         Book.__init__(self, title, author, rating, reviews, price, years, genre)
-#         self.genre = genre
-#         genre = Book.FICTION
-#         genre = Book.NON_FICTION
-#
-#     def __str__(self) -> str:
-#         """
-#         Returns the string representation of a Book object.
-#         :returns: string representation of the Book object.
-#         """
-#         return f"{self.title}: {self.genre} {self.years}."
+
+class FictionBook(Book):
+    """
+    """
+
+    def __init__(self, title, author, rating, reviews, price, years, genre=Book.FICTION) -> None:
+        """
+        """
+        Book.__init__(self, title, author, rating, reviews, price, years, genre)
+
+    def __str__(self) -> str:
+        """
+        """
+        return f"{self.title}: {self.genre} {self.years}."
+
+
+class NonFictionBook(Book):
+    """
+    """
+
+    def __init__(self, title, author, rating, reviews, price, years, genre=Book.NON_FICTION) -> None:
+        """
+        """
+        Book.__init__(self, title, author, rating, reviews, price, years, genre)
+
+    def __str__(self) -> str:
+        """
+        Returns the string representation of a Book object.
+        :returns: string representation of the Book object.
+        """
+        return f"{self.title}: {self.genre} {self.years}."

@@ -15,8 +15,8 @@ from typing import Dict, List
 
 # Testing data
 book = Book('Catching Fire (The Hunger Games)', 'Suzanne Collins', 4.7, 22614, 11, [2010], 'Fiction')
-#fiction = FictionBook('Catching Fire (The Hunger Games)', 'Suzanne Collins', 4.7, 22614, 11, [2010])
-#nonfiction = NonFictionBook('Calm the F*ck Down: An Irreverent Adult Coloring Book (Irreverent Book Series)', "Sasha O'Hara", 4.6, 10369, 4, [2016])
+fiction = FictionBook('Catching Fire (The Hunger Games)', 'Suzanne Collins', 4.7, 22614, 11, [2010])
+nonfiction = NonFictionBook('Calm the F*ck Down: An Irreverent Adult Coloring Book (Irreverent Book Series)', "Sasha O'Hara", 4.6, 10369, 4, [2016])
 
 
 @pytest.fixture
