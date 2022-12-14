@@ -5,7 +5,7 @@ Author: Emanuela Dumitru
 Copyright (c) 2021-2022 - Eindhoven University of Technology - VU Amsterdam, The Netherlands
 This software is made available under the terms of the MIT License.
 """
-from shlex import shlex
+
 from typing import Dict, List
 import csv
 import statistics
@@ -19,6 +19,7 @@ class Book:
 
     FICTION: str = 'Fiction'
     NON_FICTION: str = 'Non Fiction'
+    recommended = False
 
     def __init__(self, title, author, rating, reviews, price, years, genre) -> None:
         """
@@ -47,13 +48,19 @@ class Book:
         """
         return f"{self.title}"
 
+    def recommend(self,ratingtst:int, reviewstst:int) -> None:
+        if self.rating >= ratingtst and self.reviews >= reviewstst:
+            Book.recommended = True
+        else:
+            Book.recommended = False
+
 
 class Amazon:
     """
     Contains a list of bestselling books.
     """
 
-    def __init__(self, bestsellers: list):
+    def __init__(self, bestsellers: list) ->None:
         """
         """
         self.bestsellers: list = bestsellers
@@ -63,6 +70,8 @@ class Amazon:
         """
         entry:Dict = {}
         res: Dict = {}
+        name = ''
+        dataset = []
         with open(path, encoding='utf-8-sig') as CSV_file:
             reader = csv.DictReader(CSV_file, delimiter=";")
 
@@ -85,14 +94,17 @@ class Amazon:
                         entry.update({line[i]:row[i]})
                         i +=1
                     j += 1
-                print(entry)
                 for k, v in entry.items():
                     if (k == 'User Rating' or k == 'Price') and v == float:
                         v = float(v)
                     if k == 'Reviews' and v.isdigit():
                         v = int(v)
+                    if k == 'Name':
+                        print(entry[k])
                     res.update({k:v})
-                print(res)
+
+    # def recommend_book(ratingtst:int, reviewstst:int) -> None:
+
 
 Amazon.read_books_csv(get_absolute_path('data/books.csv'))
 
