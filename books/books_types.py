@@ -5,11 +5,10 @@ Author: Emanuela Dumitru
 Copyright (c) 2021-2022 - Eindhoven University of Technology - VU Amsterdam, The Netherlands
 This software is made available under the terms of the MIT License.
 """
-
+from shlex import shlex
 from typing import Dict, List
 import csv
 import statistics
-import re
 
 from books.books_utils import get_absolute_path
 
@@ -79,24 +78,21 @@ class Amazon:
             for dct in reader:
                 for key, value in dct.items():
                     line = key.split(',')
-                    row = re.split('''","(?=(?:[^'"]|'[^']*'|"[^"]*")*$)''', value)
-                    # row = value.split(',', maxsplit='"')
-                print(row)
+                    row = value.split(',')
 
-                # print(row[0])
-                # for i in range(len(dct)):
-                #     for j in range(len(line) - 1):
-                #         entry.update({line[i]:row[i]})
-                #         i +=1
-                #     j += 1
-                # print(entry)
-                # for k, v in entry.items():
-                #     if k == 'User Rating' or k == 'Price':
-                #         v = float(v)
-                #     if k == 'Reviews':
-                #         v = int(v)
-                #     res.update({k:v})
-                # print(res)
+                for i in range(len(dct)):
+                    for j in range(len(line) - 1):
+                        entry.update({line[i]:row[i]})
+                        i +=1
+                    j += 1
+                print(entry)
+                for k, v in entry.items():
+                    if (k == 'User Rating' or k == 'Price') and v == float:
+                        v = float(v)
+                    if k == 'Reviews' and v.isdigit():
+                        v = int(v)
+                    res.update({k:v})
+                print(res)
 
 Amazon.read_books_csv(get_absolute_path('data/books.csv'))
 
