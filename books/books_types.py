@@ -9,6 +9,9 @@ This software is made available under the terms of the MIT License.
 from typing import Dict, List
 import csv
 import statistics
+import re
+
+from books.books_utils import get_absolute_path
 
 
 class Book:
@@ -59,9 +62,43 @@ class Amazon:
     def read_books_csv(path: str) -> None:
         """
         """
+        entry:Dict = {}
+        res: Dict = {}
         with open(path, encoding='utf-8-sig') as CSV_file:
             reader = csv.DictReader(CSV_file, delimiter=";")
 
+            # title = row[0]
+            # author = row[1]
+            # rating = line[2]
+            # reviews = line[3]
+            # price = line[4]
+            # years = line[5]
+            # genre = line[6]
+            #print(Book(title, author, rating, reviews, price, years, genre))
+
+            for dct in reader:
+                for key, value in dct.items():
+                    line = key.split(',')
+                    row = re.split('''","(?=(?:[^'"]|'[^']*'|"[^"]*")*$)''', value)
+                    # row = value.split(',', maxsplit='"')
+                print(row)
+
+                # print(row[0])
+                # for i in range(len(dct)):
+                #     for j in range(len(line) - 1):
+                #         entry.update({line[i]:row[i]})
+                #         i +=1
+                #     j += 1
+                # print(entry)
+                # for k, v in entry.items():
+                #     if k == 'User Rating' or k == 'Price':
+                #         v = float(v)
+                #     if k == 'Reviews':
+                #         v = int(v)
+                #     res.update({k:v})
+                # print(res)
+
+Amazon.read_books_csv(get_absolute_path('data/books.csv'))
 
 class FictionBook(Book):
     """
